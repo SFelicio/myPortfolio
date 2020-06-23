@@ -1,0 +1,476 @@
+body {
+    font-family: 'Quicksand';
+    margin: 0;
+    padding: 0;
+}
+#main{
+    width: 100%;
+    height: 100vh;
+    background-color: #000;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+.container{
+    width: 100%;
+    height: 100vh;
+}
+.hero{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.logo{
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    margin-left: -15px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: #fff;
+    padding: 10px;
+}
+.logo img{
+    width: 30px;
+    height: 30px;
+}
+.hero h1{
+    color: #fff;
+    font-size: 8em;
+    font-family: 'jenna sue';
+    text-align: center;
+}
+/**MENU**/
+.menu{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+.menu h2{
+    font-size: 70%;
+    color: #fff;
+    font-family: 'sansumi';
+    letter-spacing: 2px;
+    padding: 10px;
+    text-align: center;
+    cursor: pointer;
+}
+.portfolio h2:hover{
+    color: #e21776;
+}
+.hire  h2:hover{
+    color: rgb(240, 51, 139);
+}
+.skills h2:hover{
+    color: rgb(250, 83, 161);
+}
+.cv h2:hover{
+    color: rgb(250, 121, 181);
+}
+/*PORTFOLIO CONTENT*/
+.portfolio-content{
+    position: fixed;
+    width: 100%;
+    height: 0%;
+    bottom: 20vh;
+    background-color: rgba(255, 255, 255, 1);
+    left: 0;
+    top:0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 5px 5px 10px;
+    overflow: hidden;
+    transition: 2s;
+    z-index:1;
+}
+.portfolio-list{
+    background-color: #fff;
+    display: inline-flex;
+    overflow: auto;
+    white-space: nowrap;
+}
+.portfolio-list li{
+    position: relative;
+    text-decoration: none;
+    list-style: none;
+}
+.portfolio-list a{
+    cursor: pointer;
+    display: inline-block;
+}
+.portfolio-list img{
+    width: 200px;
+    height: 200px;
+    padding: 5px;
+    position: relative;
+}
+.overlay{
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    margin-left: 10px;
+    color: #fff;
+    font-size: 10px;
+}
+.tooltip{
+    visibility: visible;
+    width: 100px;
+    background-color: rgba(0, 0, 0,.3);
+    color: #fff;
+    text-align: center;
+    font-size: 8px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 3;
+    top: 10px;
+    right: 10px;
+    opacity: 0;
+   }
+.img-tooltip:hover  .tooltip{
+    visibility: visible;
+    opacity: 1;
+}
+
+.close {
+    position: absolute;
+    bottom: 2%;
+    color: rgb(226, 23, 118);
+    left: 50%;
+    margin-left: -15px;
+    font-size: 50px;
+    font-family: 'jenna sue';
+    cursor: pointer;
+    text-decoration: none;
+}
+.close:hover{
+    color: #000;
+}
+
+/*SCROLL BAR*/
+::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-track {
+background: #0a0a0a; 
+}  
+::-webkit-scrollbar-thumb {
+    background: rgb(250, 121, 181); 
+}
+::-webkit-scrollbar-thumb:hover {
+    background: rgb(226, 23, 118); 
+}
+::-webkit-scrollbar-button{
+    background: #fff;
+}
+
+/*HIRE*/
+
+.hire-content{
+    position: fixed;
+    width: 100%;
+    height: 0%;
+    bottom: 20vh;
+    background-color: rgb(226, 23, 118);
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 5px 5px 10px;
+    overflow: hidden;
+    z-index:1;
+    transition: 2s;
+}
+.close-right {
+    position: absolute;
+    bottom: 2%;
+    color:#fff;
+    right: 2%;
+    font-size: 50px;
+    font-family: 'jenna sue';
+    text-decoration: none;
+}
+.close-right:hover{
+    color: #000;
+}
+.hire-list{
+    width: 100%;
+    height: 80vh;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    margin-top: 50px;
+}
+.hire-list li{
+    list-style: none;
+}
+.hire-list li a{
+    text-decoration: none;
+    color: #fff;
+}
+.text-1 {
+    position: absolute;
+    top: 15%;
+    left: 5%;
+    font-family: 'jenna sue';
+    font-size: 50px;
+    font-weight: bold;
+    animation-name: animate1;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+}
+@keyframes animate1{
+    0% {left: 5%; top: 15%;}
+    50%{left: 10%; top: 15%;}
+    100%{left: 5%; top: 15%;}
+}
+.text-2 {
+    position: absolute;
+    font-family: 'great vibes';
+    font-size: 40px;
+    top: 20%;
+    right: 15%;
+    letter-spacing: 2px;
+    animation-name: animate2;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+@keyframes animate2{
+    0%{right: 15%; top: 20%;}
+    50%{right: 15%; top: 25%;}
+    100%{right: 15%; top: 20%;}
+}
+.text-3 {
+    position: absolute;
+    font-family: 'montserrat';
+    font-size: 30px;
+    top: 30%;
+    left: 30%;
+    animation-name: animate3;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+}
+@keyframes animate3{
+    0%{transform: rotate(0deg);}
+    38%{transform: rotate(0deg);}
+    78%{transform: rotate(180deg);}
+    100%{transform: rotate(360deg);}
+}
+.text-4 {
+    position: absolute;
+    font-family: 'righteous';
+    font-size: 20px;
+    top: 45%;
+    right:20%;
+    animation-name: animate4;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+}
+@keyframes animate4{
+    0%{transform:scale(0,0);}
+    30%{transform: scale(1,1);}
+    60%{transform: scale(1.2,1.2);}
+    100%{transform: scale(0,0);}
+}
+.text-5 {
+    position: absolute;
+    font-family: 'lemon tuesday';
+    font-size: 65px;
+    top: 60%;
+    left: 20%;
+    animation-name: animate5;
+    animation-duration: 8s;
+    animation-iteration-count: infinite;
+}
+@keyframes animate5{
+    0%{left: 20%; top: 60%;}
+    50%{left: 30%; top: 45%;}
+    100%{left: 20%; top: 60%;}
+}
+.text-6 {
+    position: absolute;
+    font-family: 'blessed day';
+    font-size: 50px;
+    letter-spacing: 2px;
+    line-height: .5;
+    top: 80%;
+    right: 25%;
+    text-align: center;
+    animation-name: animate6;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+}
+@keyframes animate6{
+    0% {right: 25%; top: 80%;}
+    50%{right: 40%; top: 80%;}
+    100%{right: 25%; top: 80%;}
+}
+
+/*SKILLSET*/
+.skill-content{
+    position: fixed;
+    width: 100%;
+    height: 0;
+    bottom: 20vh;
+    background-color: rgb(39, 39, 39);
+    left: 0;
+    top:0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    box-shadow: 5px 5px 10px;
+    overflow: hidden;
+    z-index: 1;
+    transition: 4s ease;
+}
+.skill-content p{
+    color: #fff;
+    margin: 5px;
+    padding: 5px;
+}
+.skills .close-left{
+    position: absolute;
+    top: 2%;
+    color: #fff;
+    right: 2%;
+    font-size: 50px;
+    font-family: 'jenna sue';
+    cursor: pointer;
+    text-decoration: none;
+}
+.close-left:hover{
+    color: rgb(226, 23, 118);
+}
+
+/*CV*/
+
+.cv-content{
+    position: absolute;
+    width: 0;
+    height: 80vh;
+    bottom: 20vh;
+    background-color: #000;
+    left: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border-bottom: rgb(114, 113, 113) 1px solid;
+    box-shadow: 5px 5px 10px;
+    overflow: hidden;
+    transition: 1s ease;
+    z-index: 1;
+}
+.cv-item{
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    justify-content: center;
+    position: relative;
+    text-align: center;
+    margin-left: 12.5%
+}
+.cv-item .social-media{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+}
+.social-media a{
+    color: rgb(226, 23, 118);
+    font-size: 50px;
+    padding: 20px;
+    margin-right: 100px;
+}
+.cv-item .resume{
+    width: 40%;
+}
+.download-btn img{
+    position: absolute;
+    width: 20%;
+    right: 15%;
+    top: 18%;
+    animation-name: animate7;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+}
+@keyframes animate7{
+    0%{right: 15%; top: 12%;}
+    50%{right: 15%; top: 18%;}
+    100%{right: 15%; top: 12%;}
+}
+
+.close-bottom{
+    position: absolute;
+    bottom: 50%;
+    right: 2%;
+    color: #fff;
+    font-size: 50px;
+    text-decoration: none;
+    font-family: 'Jenna Sue';
+}
+.close-bottom:hover{
+    color: rgb(226, 23, 118);
+}
+
+
+
+@media screen and (max-width: 800px){
+    
+    .skills p{
+        font-size: 12px;
+        margin: 0;
+    }
+    .download-btn img{
+        width: 13%;
+        right: 10%;
+        margin-left: 30px;
+    }
+}        
+@media screen and (max-width: 736px){
+    .text-1, .text-5, .text-6{
+        font-size: 30px;
+    }
+}
+@media screen and (max-width: 414px){
+    .menu h2{
+        font-size: 50%;
+    }
+    .cv-item{
+        width: 100%;
+        display: grid;
+        grid-template-columns: auto;
+        justify-content: center;
+        position: relative;
+        text-align: center;
+        margin-left: 12.5%;
+    }
+    .cv-item .social-media{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-content: center;
+    }
+    .social-media a{
+        font-size: 20px;
+        padding: 20px;
+        margin-right: 20px;
+    }    
+    .cv-item .resume{
+        width: 70%;
+        margin-left: 8%;
+    }
+    .download-btn img{
+        position: relative;
+        width: 20%;
+        margin-left: 23%;
+    }
+}
